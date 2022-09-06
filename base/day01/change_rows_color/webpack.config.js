@@ -15,7 +15,7 @@ const cleanWebpackPlugin = new CleanWebpackPlugin()
 
 // 使用node.js中的导出语法, 向外导出一个webpack配置对象
 module.exports = {
-    devtool: "eval-source-map",c
+    devtool: "eval-source-map",
     // devtool: "nosources-source-map",
     // 代表webpack的运行模式, 可选的有 development 和 production
     mode: "development",
