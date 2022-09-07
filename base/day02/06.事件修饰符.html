@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue@2"></script>
+    <div id="app">
+        <a href="http://www.baidu.com" @click.prevent="show">跳转到百度</a>
+        <hr>
+        <div style="height: 150; background-color: aquamarine; padding-left: 100px; line-height: 150px;" @click="divHandler">
+            <button @click.stop="btnHandler">按钮</button>
+        </div>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {},
+            // 定义事件的处理函数
+            methods: {
+                show() {
+                    console.log("ok")
+                },
+                divHandler(){
+                    console.log("divHandler")
+                },
+                btnHandler(){
+                    console.log("btnHandler")
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

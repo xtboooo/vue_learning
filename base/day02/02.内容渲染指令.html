@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue@2"></script>
+    <div id="app">
+        <!-- v-text -->
+        <p v-text="username">name: </p>
+        <p v-text="gender">gender: </p>
+        <hr>
+        <!-- {{}} -->
+        <p>name: {{ username }}</p>
+        <p>gender: {{ gender }}</p>
+        <hr>
+        <!-- v-html -->
+        <p>Using text interpolation: {{ rawHtml }}</p>
+        <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                username: "xtbo",
+                gender: "male",
+                rawHtml: '<span style="color: red">This should be red.</span>'
+            }
+        })
+    </script>
+</body>
+
+</html>

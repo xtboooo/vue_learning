@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue@2"></script>
+    <div id="app">
+        <input type="text" :placeholder="tips">
+        <hr>
+        <img :src="picture" alt="" style="width: 150px;">
+        <hr>
+        {{ number + 1 }}
+        {{ ok ? 'YES' : 'NO' }}
+        {{ message.split('').reverse().join('') }}
+        <div :title="'list-' + id">这是一个div</div>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                tips: "请输入用户名: ",
+                picture: "https://v2.cn.vuejs.org/images/logo.svg",
+                number: 2,
+                ok: false,
+                message: "a b c",
+                id: 1
+            }
+        })
+    </script>
+</body>
+
+</html>
