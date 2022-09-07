@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{ date | dateFormat}}</p>
+    </div>
+
+    <script src="https://unpkg.com/vue@2"></script>
+    <script src="https://unpkg.com/dayjs@1.11.5/dayjs.min.js"></script>
+    <script>
+        Vue.filter('dateFormat', function (time) {
+            const dtStr =  dayjs(time).format("YYYY/MM")
+            return dtStr
+        })
+
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                date: 1693781876406
+            },
+        })
+    </script>
+</body>
+
+</html>

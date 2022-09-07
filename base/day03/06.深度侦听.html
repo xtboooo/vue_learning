@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <input type="text" v-model="info.message">
+    </div>
+    <script src="https://unpkg.com/vue@2"></script>
+    <script src="https://unpkg.com/jquery@3.6.1/dist/jquery.js"></script>
+
+    <script>
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                username: "",
+                info: {
+                    message: "vue"
+                }
+            },
+            watch: {
+                /* info: {
+                    // 侦听器的处理函数
+                    handler(newVal) {
+                        console.log(newVal.message)
+                    },
+                    // 是否自动触发一次
+                    immediate: true,
+                    // 为了发现对象内部值的变化，可以在选项参数中指定 deep: true
+                    deep:true
+                } */
+                "info.message": {
+                    handler(newVal) {
+                        console.log(newVal)
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
