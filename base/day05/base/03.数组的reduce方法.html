@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = [
+            { name: 'a', choice: true, price: 10, count: 1 },
+            { name: 'b', choice: true, price: 20, count: 2 },
+            { name: 'c', choice: true, price: 30, count: 3 }
+        ]
+        // let amt = 0
+        // arr.filter(item => item.choice).forEach(item => {
+        //     amt += item.price * item.count
+        // })
+        // console.log(amt)
+
+        // const res = arr.filter(item => item.choice).reduce((amt, item) => {
+        //     return amt += item.price * item.count
+        // }, 0)
+        // console.log(res)
+
+        const res = arr.filter(item => item.choice).reduce((amt, item) => amt += item.price * item.count, 0)
+        console.log(res)
+    </script>
+</body>
+
+</html>
