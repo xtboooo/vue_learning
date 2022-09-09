@@ -1,7 +1,8 @@
 <template>
   <div class="app-container">
     <h1>App 根组件</h1>
-    <Test info="你好"></Test>
+    <button @click="flag = !flag">Toggle flag</button>
+    <Test info="你好" v-if="flag"></Test>
     <hr />
     <div class="box">
       <Left></Left>
@@ -21,6 +22,11 @@ export default {
     Left,
     Right,
     Test,
+  },
+  data(){
+    return {
+      flag: true
+    }
   }
 };
 </script>

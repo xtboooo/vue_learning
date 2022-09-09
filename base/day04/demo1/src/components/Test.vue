@@ -65,6 +65,14 @@ export default {
     console.log(this.message); // hello vue~
     const dom = document.querySelector("#pppp"); // message的值是: hello vue~
     console.log(dom.innerHTML);
+  },
+  beforeDestroy() {
+    console.log("beforeDestroy");
+    console.log(this.message);
+  },
+  destroyed() {
+    console.log("destroyed");
+    console.log(this.message);
   }
 };
 </script>
