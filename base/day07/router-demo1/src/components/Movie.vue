@@ -13,7 +13,7 @@ export default {
 <style lang="less" scoped>
 .movie-container {
   min-height: 200px;
-  background-color: skyblue;
+  background-color: orange;
   padding: 15px;
   > a {
     margin-right: 10px;
